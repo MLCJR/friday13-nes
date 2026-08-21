@@ -1,0 +1,42 @@
+Documentation in this directory is licensed under
+
+    Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+    Copyright (c) 2026 MLCJR
+
+Full text:  https://creativecommons.org/licenses/by/4.0/legalcode
+Summary:    https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, link to the license, and
+indicate if changes were made.
+
+WHY THIS RATHER THAN MIT
+
+These documents exist to be quoted, cited, corrected and built on — by wikis
+like The Cutting Room Floor and Data Crystal, by other researchers, and by
+anyone writing about this game. CC BY is the licence those communities already
+use and expect, and it asks for the one thing that actually matters here:
+attribution, so a finding can be traced back to the work that produced it and
+checked.
+
+ATTRIBUTION
+
+    Friday the 13th (NES) Technical Reference, by MLCJR
+    https://github.com/  <repository URL>
+
+WHAT THIS DOES NOT COVER
+
+  * Facts. This licence covers the expression — the writing, tables and
+    diagrams — not the underlying facts about the game, which nobody owns and
+    which you are free to restate however you like.
+  * Quotations from the 1989 LJN instruction manual, the in-game text, and
+    material attributed to The Cutting Room Floor, GameFAQs guide authors, or
+    other named sources. Those belong to their respective rightsholders and are
+    quoted here briefly for identification and commentary.
+  * Section 16 of `README.md` is generated from
+    a machine-checked manifest; the generator is MIT-licensed and lives in the
+    project repository.
+
+If in doubt about reusing something here, the answer is almost certainly yes —
+credit MLCJR and go ahead.

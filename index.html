@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="no-referrer">
+<title>Friday the 13th (NES): disassembly, research and hacks</title>
+<meta name="description" content="A from-scratch disassembly of Friday the 13th (NES, 1989), the research written up from it, and the hacks built on it, including The Configurizer and battery saves.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Friday the 13th (NES): disassembly, research and hacks">
+<meta property="og:url" content="https://mlcjr.github.io/friday13-nes/">
+<meta property="og:description" content="A from-scratch disassembly of the 1989 cartridge, the research written up from it, and the hacks built on it.">
+<style>
+:root{
+  --void:#0b0910; --panel:#13101d; --raise:#221b36;
+  --line:#2b2442; --ink:#efecf7; --dim:#9d95b8; --faint:#6d6589;
+  --violet:#8f7dff; --violet-deep:#5b4ac4; --blood:#ff4d61;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--void); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.5;
+  padding:clamp(24px,6vw,72px) clamp(16px,5vw,32px)}
+.wrap{max-width:760px; margin:0 auto}
+h1{font-family:var(--mono); font-size:clamp(21px,4.4vw,30px); letter-spacing:-.01em;
+  margin:0 0 6px; font-weight:600}
+h1 .yr{color:var(--faint); font-weight:400}
+.lede{color:var(--dim); margin:0 0 6px; max-width:60ch}
+.lede b{color:var(--ink); font-weight:600}
+.rule{height:1px; background:var(--line); margin:26px 0 22px}
+.parts{display:grid; gap:10px}
+.part{display:grid; grid-template-columns:1fr auto; gap:2px 12px;
+  padding:14px 16px; border:1px solid var(--line); border-radius:3px;
+  background:var(--panel); text-decoration:none; color:inherit;
+  transition:border-color .12s, background .12s}
+.part:hover,.part:focus-visible{border-color:var(--violet-deep); background:var(--raise)}
+.part:focus-visible{outline:2px solid var(--violet); outline-offset:2px}
+.pl{font-family:var(--mono); font-size:15px; color:var(--violet); font-weight:600}
+.pw{font-family:var(--mono); font-size:11px; color:var(--faint);
+  letter-spacing:.06em; text-transform:uppercase; align-self:center}
+.pb{grid-column:1/-1; color:var(--dim); font-size:14.5px; max-width:62ch}
+.part.app{border-color:var(--violet-deep); background:linear-gradient(180deg,#191330,var(--panel))}
+.part.app .pl{color:#c9bfff}
+.part.app .pw{color:var(--violet)}
+.foot{margin-top:28px; color:var(--faint); font-size:13.5px; max-width:64ch}
+.foot a{color:var(--violet-deep)}
+.foot .warn{color:var(--blood)}
+@media (prefers-reduced-motion:reduce){.part{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Friday the 13th <span class="yr">(NES, 1989)</span></h1>
+  <p class="lede">A from-scratch disassembly of the cartridge, the research
+  written up from it, and the things built on top. The program ROM is
+  <b>fully mapped</b>: 32,768 bytes, no gaps.</p>
+  <div class="rule"></div>
+  <div class="parts">
+    <a class="part app" href="https://mlcjr.github.io/friday13-nes/configurizer/"><span class="pl">The Configurizer</span><span class="pw">runs here</span><span class="pb">Set or reroll the cartridge: items, weapons, Jason&rsquo;s route, cabin contents. Runs in your browser, and your ROM never leaves the page.</span></a>
+    <a class="part" href="https://github.com/MLCJR/friday13-nes/blob/main/README.md"><span class="pl">Reference</span><span class="pw">on github.com</span><span class="pb">The findings, facts only, with the method left out. Includes a generated map of all 32,768 bytes of program ROM.</span></a>
+    <a class="part" href="https://github.com/MLCJR/friday13-nes/blob/main/RAM-MAP.md"><span class="pl">RAM map</span><span class="pw">on github.com</span><span class="pb">All 2 KB of work RAM, byte by byte, with what each one holds and how that was established.</span></a>
+    <a class="part" href="https://github.com/MLCJR/friday13-nes/blob/main/CHR-MAP.md"><span class="pl">CHR map</span><span class="pw">on github.com</span><span class="pb">The 32 KB of character ROM, both descriptor tables decoded, and the font that renders differently depending on the bank.</span></a>
+    <a class="part" href="https://github.com/MLCJR/friday13-nes/blob/main/ROMHACKS.md"><span class="pl">ROM Hacks</span><span class="pw">on github.com</span><span class="pb">What has been built on the disassembly so far, including a conversion that gives the cartridge the battery saves it shipped without.</span></a>
+    <a class="part" href="https://github.com/MLCJR/friday13-nes/tree/main/patches/"><span class="pl">Patches</span><span class="pw">on github.com</span><span class="pb">BPS patches, to apply to your own copy, plus what each one changes.</span></a>
+  </div>
+  <p class="foot"><span class="warn">No ROM is distributed here</span>, and none
+  is uploaded anywhere. The Configurizer patches a copy you already own, in your
+  own browser. Documents are CC BY 4.0.</p>
+</div>
+</body>
+</html>
